@@ -5,11 +5,12 @@ PACKAGE = "pytest-allure-adaptor"
 VERSION = "1.5.2"
 
 import os
+import codecs
 from setuptools import setup
 
 
 def read(fname):
-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+    return codecs.open(os.path.join(os.path.dirname(__file__), fname), encoding='utf-8').read()
 
 setup(
     name=PACKAGE,
